@@ -2,11 +2,11 @@ FROM mcr.microsoft.com/dotnet/core/sdk:3.1 AS build-env
 WORKDIR /app
 
 # Copy csproj and restore as distinct layers
-COPY ../sample-mvc-v1/*.csproj ./
+COPY sample-mvc-v1/*.csproj ./
 RUN dotnet restore
 
 # Copy everything else and build
-COPY ../sample-mvc-v1/. ./
+COPY sample-mvc-v1/. ./
 RUN dotnet publish -c Release -o out
 
 # Build runtime image

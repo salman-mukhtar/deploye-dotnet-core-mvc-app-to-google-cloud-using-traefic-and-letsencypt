@@ -1,0 +1,13 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: sample-mvc-v1
+spec:
+  rules:
+  - host: appv1.digitalbarries.com
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: sample-mvc-v1
+          servicePort: 80
