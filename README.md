@@ -1,1 +1,1 @@
-# deploye-dotnet-core-mvc-app-to-google-cloud-using-traefic-and-letsencypt
+# Deploye .Net Core app to GCP using Traefic and LetsEncypt
