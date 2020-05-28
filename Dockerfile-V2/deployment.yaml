@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sample-mvc-v2
+spec:
+  selector:
+    matchLabels:
+      app: sample-mvc-v2
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: sample-mvc-v2
+    spec:
+      containers:
+        - name: sample-mvc-v2
+          imagePullPolicy: Never
+          image: sample-mvc-v2
+          resources:
+            limits:
+              memory: "50Mi"
+              cpu: "50m"
+            requests:
+              memory: "20Mi"
+              cpu: "20m"
+          ports:
+          - containerPort: 80
