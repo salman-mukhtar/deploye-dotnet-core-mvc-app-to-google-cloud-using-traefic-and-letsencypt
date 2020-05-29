@@ -24,12 +24,63 @@ This will create a projects with necessory structure. Run the applications by ty
 dotnet run
 ```
 
-I have changed the text in both applications to show the difference. Below you can see results from sample-mvc-v1 and sample-mvc-v2
+I have changed the text in both applications to show the difference. Below you can see results from both applications.
+
+**sample-mvc-v1** 
 
 
 | ![images/appv1.png](images/appv1.png) |
 | ------------------------------------------------------------------- |
 
 
+**sample-mvc-v2**
+
+
 | ![images/appv2.png](images/appv2.png) |
 | ------------------------------------------------------------------- |
+
+**Docker Preparations**
+
+To dockerize the MVC application, we need the Dockerfile file, as you are familiar with, that we can encode it as follows.
+
+**Dockerfile for sample-mvc-v1**
+
+```
+FROM mcr.microsoft.com/dotnet/core/sdk:3.1 AS build-env
+WORKDIR /app
+
+# Copy csproj and restore as distinct layers
+COPY sample-mvc-v1/*.csproj ./
+RUN dotnet restore
+
+# Copy everything else and build
+COPY sample-mvc-v1/. ./
+RUN dotnet publish -c Release -o out
+
+# Build runtime image
+FROM mcr.microsoft.com/dotnet/core/aspnet:3.1
+WORKDIR /app
+COPY --from=build-env /app/out .
+ENTRYPOINT ["dotnet", "sample-mvc-v1.dll"]
+```
+
+**Dockerfile for sample-mvc-v2**
+
+```
+FROM mcr.microsoft.com/dotnet/core/sdk:3.1 AS build-env
+WORKDIR /app
+
+# Copy csproj and restore as distinct layers
+COPY sample-mvc-v2/*.csproj ./
+RUN dotnet restore
+
+# Copy everything else and build
+COPY sample-mvc-v2/. ./
+RUN dotnet publish -c Release -o out
+
+# Build runtime image
+FROM mcr.microsoft.com/dotnet/core/aspnet:3.1
+WORKDIR /app
+COPY --from=build-env /app/out .
+ENTRYPOINT ["dotnet", "sample-mvc-v2.dll"]
+```
