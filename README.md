@@ -5,8 +5,9 @@ This repository aims to deploye .Net core mvc application to Google Cloud with T
 **Prerequisite**
 
 * Google Cloud Account
-* Visual studio code
-* Docker [Install Docker](https://github.com/salman-mukhtar/setting-up-kubernetes-environment/blob/master/README.md)
+* Dockerhub Account
+* Visual Studio Code
+* Docker Engine [Install Docker](https://github.com/salman-mukhtar/setting-up-kubernetes-environment/blob/master/README.md)
 * Google Cloud SDK & Kubectl [Install gcloud SDK & kubectl](https://github.com/salman-mukhtar/setting-up-kubernetes-environment/blob/master/README.md)
 
 **Setting up .Net Core Web API**
@@ -84,3 +85,59 @@ WORKDIR /app
 COPY --from=build-env /app/out .
 ENTRYPOINT ["dotnet", "sample-mvc-v2.dll"]
 ```
+
+After completing the dockerfile file, we can start dockerizing both applications and build the image. Use the build command as follows.
+
+```
+docker build -t mesalman/app:v1 -f docker-deployment-v1/Dockerfile .
+docker build -t mesalman/app:v2 -f docker-deployment-v1/Dockerfile .
+```
+
+This will create 2 docker images tagged with "sample-mvc-v1:latest" and "sample-mvc-v2:latest". See below.
+
+
+**Docker image for sample-mvc-v1**
+
+| ![images/imagev1.png](images/imagev1.png) |
+| ------------------------------------------------------------------- |
+
+
+**Docker image for sample-mvc-v2**
+
+| ![images/imagev2.png](images/imagev2.png) |
+| ------------------------------------------------------------------- |
+
+Now its time to push the docker images to dockerhub as public images so that we can pull them on Google Cloud while deploying our applications. First we login to dockerhub if not already. Use following command on terminal.
+
+```
+docker login --username=mesalman
+```
+
+It will ask your password. Write password and hit enter. You will see something like below.
+
+| ![images/dockerhub-login.png](images/dockerhub-login.png) |
+| ------------------------------------------------------------------- |
+
+
+Check the image ID using  
+
+```
+docker images
+```
+
+and what you will see will be similar to
+
+| ![images/dockerimages.png](images/dockerimages.png) |
+| ------------------------------------------------------------------- |
+
+
+To push the images to dockerhub use following commands on terminal
+
+```
+docker push mesalman/app:v1
+docker push mesalman/app:v1
+```
+
+
+
+
