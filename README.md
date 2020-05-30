@@ -1,6 +1,6 @@
 # .Net core app to GCP using Traefic and LetsEncypt
 
-This repository aims to deploye .Net core mvc application to Google Cloud with Traefic as ingress controller and LetsEncrypt. We will run 2 mvc application in 2 different pods (sample-mvc-v1 & sample-mvc-v2) and redirect the request by using Traefic. We will also use SSL certificate deployment by using DNS challange in LetsEncrypt.
+This repository aims to deploye .Net core mvc application to Google Cloud with Traefic as ingress controller and LetsEncrypt. We will run 2 mvc applications in 2 different pods (sample-mvc-v1 & sample-mvc-v2) and redirect the request by using Traefic. We will also use SSL certificate by using HTTP challange in LetsEncrypt.
 
 **Prerequisite**
 
@@ -12,7 +12,7 @@ This repository aims to deploye .Net core mvc application to Google Cloud with T
 
 **Setting up .Net Core Web API**
 
-Let's start with a .net core mvc application as an example. We will create 2 mvc applications for this excersize to demonstrate Traefik. To create it, we can proceed with the terminal command below.
+Let's start with a .net core mvc application as an example. We will create 2 mvc applications for this excersize to demonstrate Traefik. To create mvc applications, we can proceed with the terminal command below.
 
 ```
 dotnet new mvc -o sample-mvc-v1
@@ -42,7 +42,7 @@ I have changed the text in both applications to show the difference. Below you c
 
 **Docker Preparations**
 
-To dockerize the MVC application, we need the Dockerfile file, as you are familiar with, that we can encode it as follows.
+To dockerize the MVC applications, we need the Dockerfile file, as you are familiar with, that we can encode it as follows.
 
 **Dockerfile for sample-mvc-v1**
 
@@ -86,14 +86,14 @@ COPY --from=build-env /app/out .
 ENTRYPOINT ["dotnet", "sample-mvc-v2.dll"]
 ```
 
-After completing the dockerfile file, we can start dockerizing both applications and build the image. Use the build command as follows.
+After completing the dockerfile file, we can start dockerizing both applications and build the images. Use the build command as follows.
 
 ```
 docker build -t mesalman/app:v1 -f docker-deployment-v1/Dockerfile .
 docker build -t mesalman/app:v2 -f docker-deployment-v2/Dockerfile .
 ```
 
-This will create 2 docker images tagged with "mesalman/app:v1" and "mesalman/app:v2". See below.
+This will create 2 docker images tagged with "mesalman/app:v1" and "mesalman/app:v2" respectively. See below.
 
 
 **Docker image for mesalman/app:v1**
@@ -119,7 +119,7 @@ It will ask your password. Write password and hit enter. You will see something 
 | ------------------------------------------------------------------- |
 
 
-Check the image ID using  
+Check the images ID using  
 
 ```
 docker images
@@ -138,6 +138,10 @@ docker push mesalman/app:v1
 docker push mesalman/app:v2
 ```
 
+Now you can see images are uploaded to dockerhub.
 
+
+| ![images/dockerhub-images.png](images/dockerhub-images.png) |
+| -------------------------------------
 
 
