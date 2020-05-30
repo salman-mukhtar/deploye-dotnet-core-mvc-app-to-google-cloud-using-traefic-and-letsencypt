@@ -93,16 +93,16 @@ docker build -t mesalman/app:v1 -f docker-deployment-v1/Dockerfile .
 docker build -t mesalman/app:v2 -f docker-deployment-v2/Dockerfile .
 ```
 
-This will create 2 docker images tagged with "sample-mvc-v1:latest" and "sample-mvc-v2:latest". See below.
+This will create 2 docker images tagged with "mesalman/app:v1" and "mesalman/app:v2". See below.
 
 
-**Docker image for sample-mvc-v1**
+**Docker image for mesalman/app:v1**
 
 | ![images/imagev1.png](images/imagev1.png) |
 | ------------------------------------------------------------------- |
 
 
-**Docker image for sample-mvc-v2**
+**Docker image for mesalman/app:v2**
 
 | ![images/imagev2.png](images/imagev2.png) |
 | ------------------------------------------------------------------- |
@@ -135,7 +135,7 @@ To push the images to dockerhub use following commands on terminal
 
 ```
 docker push mesalman/app:v1
-docker push mesalman/app:v1
+docker push mesalman/app:v2
 ```
 
 
