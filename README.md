@@ -90,7 +90,7 @@ After completing the dockerfile file, we can start dockerizing both applications
 
 ```
 docker build -t mesalman/app:v1 -f docker-deployment-v1/Dockerfile .
-docker build -t mesalman/app:v2 -f docker-deployment-v1/Dockerfile .
+docker build -t mesalman/app:v2 -f docker-deployment-v2/Dockerfile .
 ```
 
 This will create 2 docker images tagged with "sample-mvc-v1:latest" and "sample-mvc-v2:latest". See below.
