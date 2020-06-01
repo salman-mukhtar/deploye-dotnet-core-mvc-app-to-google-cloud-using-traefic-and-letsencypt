@@ -212,7 +212,6 @@ Now we are ready to connect to our newly created cluster. To do so please follow
 To log in to a cluster, perform the following steps:
 
 * Visit the GKE menu in Cloud Console.
-* Visit the GKE menu
 * From the list of clusters, click the Connect button beside the registered cluster.
 
 Choose how you'd like to log in:
