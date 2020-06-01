@@ -149,7 +149,7 @@ Now you can see images are uploaded to dockerhub.
 
 Now we are ready to deploy our applications to GCP. To proceed we need to have following setup
 
-* **[Create a google account](https://console.cloud.google.com)**
+* **[Create a Google Account](https://console.cloud.google.com)**
 * **Create a Project**
   * Go to the Manage resources page in the Cloud Console
   * On the Select organization drop-down list at the top of the page, select the organization in which you 
@@ -167,7 +167,7 @@ Now we are ready to deploy our applications to GCP. To proceed we need to have f
 | ![images/newproject2.png](images/newproject2.png) |
 | -------------------------------------
 
-* - **Create a cluster**
+* **Create a Cluster**
     * Visit the Google Kubernetes Engine menu in Cloud Console.
     * Click the Create cluster button.
     * In the Cluster basics section, complete the following:
@@ -203,3 +203,33 @@ Now we are ready to deploy our applications to GCP. To proceed we need to have f
 | ![images/step6-cluster.png](images/step6-cluster.png) |
 | -------------------------------------
 	
+
+Now we are ready to connect to our newly created cluster. To do so please follow these steps.
+
+
+* **Logging/Coonect in to a Cluster**
+To log in to a cluster, perform the following steps:
+
+* Visit the GKE menu in Cloud Console.
+* Visit the GKE menu
+* From the list of clusters, click the Connect button beside the registered cluster.
+
+Choose how you'd like to log in:
+
+* If you are using a KSA token to log in, select Token, fill the Token field with the KSA's bearer token, and then click Login.
+* If you are using basic authentication, select Basic authentication, fill the Username and Password fields, and then click Login.
+* If you are using OpenID Connect (OIDC), select OpenID Connect, then click Login.
+* If you authenticate successfully, you are able to inspect the cluster and get details about its nodes.
+
+| ![images/step6-cluster.png](images/step6-cluster.png) |
+| -------------------------------------
+	
+Check the context to be sure you are connected with the Cluster. To do so run following command on terminal.
+
+```
+kubectl config get-contexts
+```
+You will see something like follwoing.
+
+| ![images/cluster-context.png](images/cluster-context.png) |
+| -------------------------------------
