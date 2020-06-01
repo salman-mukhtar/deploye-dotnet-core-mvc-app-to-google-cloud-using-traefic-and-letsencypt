@@ -149,8 +149,8 @@ Now you can see images are uploaded to dockerhub.
 
 Now we are ready to deploy our applications to GCP. To proceed we need to have following setup
 
-* [Create a google account](https://console.cloud.google.com)
-* Create a Project
+* **[Create a google account](https://console.cloud.google.com)**
+* **Create a Project**
   * Go to the Manage resources page in the Cloud Console
   * On the Select organization drop-down list at the top of the page, select the organization in which you 
   want to create a project. If you are a free trial user, skip this step, as this list does not appear.
@@ -167,5 +167,39 @@ Now we are ready to deploy our applications to GCP. To proceed we need to have f
 | ![images/newproject2.png](images/newproject2.png) |
 | -------------------------------------
 
-* - Create a cluster
-    Once GCP account is create we need to create a cluster where we will deploy our Applications
+* - **Create a cluster**
+    * Visit the Google Kubernetes Engine menu in Cloud Console.
+    * Click the Create cluster button.
+    * In the Cluster basics section, complete the following:
+      * Enter the Name for your cluster.
+      * For the Location type, select Zonal, and then select the desired zone for your cluster.
+    * From the navigation pane, under Node Pools, click default-pool.
+    * In the Node pool details section, complete the following:
+      * Enter a Name for the default Node pool.
+      * Choose the Node version for your nodes.
+      * Enter the Number of nodes to create in the cluster. You must have available resource quota for the nodes and their resources (such as firewall routes).
+	* From the navigation pane, under Node Pools, click Nodes.
+	* From the Image type drop-down list, select the desired node image.
+	* Choose the default Machine configuration to use for the instances. Each machine type is billed differently. The default machine type is n1-standard-1. 
+	* From the Boot disk type drop-down list, select the desired disk type.
+	* Enter the Boot disk size.
+	* Click Create.
+	
+| ![images/step1-cluster.png](images/step1-cluster.png) |
+| -------------------------------------
+	
+| ![images/step2-cluster.png](images/step2-cluster.png) |
+| -------------------------------------
+	
+| ![images/step3-cluster.png](images/step3-cluster.png) |
+| -------------------------------------
+	
+| ![images/step4-cluster.png](images/step4-cluster.png) |
+| -------------------------------------
+	
+| ![images/step5-cluster.png](images/step5-cluster.png) |
+| -------------------------------------
+	
+| ![images/step6-cluster.png](images/step6-cluster.png) |
+| -------------------------------------
+	
