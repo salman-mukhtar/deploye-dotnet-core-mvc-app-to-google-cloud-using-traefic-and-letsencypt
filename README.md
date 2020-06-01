@@ -207,7 +207,7 @@ Now we are ready to deploy our applications to GCP. To proceed we need to have f
 Now we are ready to connect to our newly created cluster. To do so please follow these steps.
 
 
-* **Logging/Coonect in to a Cluster**
+* **Logging/Connect in to a Cluster**
 
 To log in to a cluster, perform the following steps:
 
