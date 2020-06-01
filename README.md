@@ -164,7 +164,7 @@ Now we are ready to deploy our applications to GCP. To proceed we need to have f
 | -------------------------------------
 
 
-| ![images/newproject1.png](images/newproject1.png) |
+| ![images/newproject2.png](images/newproject2.png) |
 | -------------------------------------
 
 * - Create a cluster
