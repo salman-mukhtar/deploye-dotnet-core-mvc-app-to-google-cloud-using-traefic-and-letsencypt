@@ -2,7 +2,7 @@
 
 This repository aims to deploye .Net core mvc application to Google Cloud with Traefic as ingress controller and LetsEncrypt. We will run 2 mvc applications in 2 different pods (sample-mvc-v1 & sample-mvc-v2) and redirect the request by using Traefic. We will also use SSL certificate by using HTTP challange in LetsEncrypt.
 
-#Prerequisite
+# Prerequisite
 
 * Google Cloud Account
 * Dockerhub Account
@@ -10,7 +10,7 @@ This repository aims to deploye .Net core mvc application to Google Cloud with T
 * Docker Engine [Install Docker](https://github.com/salman-mukhtar/setting-up-kubernetes-environment/blob/master/README.md)
 * Google Cloud SDK & Kubectl [Install gcloud SDK & kubectl](https://github.com/salman-mukhtar/setting-up-kubernetes-environment/blob/master/README.md)
 
-#Setting up .Net Core Web API
+# Setting up .Net Core Web API
 
 Let's start with a .net core mvc application as an example. We will create 2 mvc applications for this excersize to demonstrate Traefik. To create mvc applications, we can proceed with the terminal command below.
 
@@ -40,7 +40,7 @@ I have changed the text in both applications to show the difference. Below you c
 | ![images/appv2.png](images/appv2.png) |
 | ------------------------------------------------------------------- |
 
-#Docker Preparations
+# Docker Preparations
 
 To dockerize the MVC applications, we need the Dockerfile file, as you are familiar with, that we can encode it as follows.
 
