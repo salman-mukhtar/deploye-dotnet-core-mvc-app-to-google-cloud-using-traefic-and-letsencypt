@@ -229,7 +229,8 @@ Check the context to be sure you are connected with the Cluster. To do so run fo
 ```
 kubectl config get-contexts
 ```
-You will see something like follwoing.
+
+The name of the context is made of Project ID-Zone-Cluster Name You will see something like follwoing.
 
 | ![images/cluster-context.png](images/cluster-context.png) |
 | -------------------------------------
