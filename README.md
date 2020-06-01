@@ -25,7 +25,7 @@ This will create a projects with necessory structure. Run the applications by ty
 dotnet run
 ```
 
-I have changed the text in both applications to show the difference. Below you can see results from both applications.
+I have changed the text in both applications to show the difference. Below you can see results from both applications. In the following images you can see both applications runing with same IP but different ports on Minikube.
 
 **sample-mvc-v1** 
 
@@ -145,4 +145,4 @@ Now you can see images are uploaded to dockerhub.
 | -------------------------------------
 
 
-# Deploying MVC webapplication to Google Cloud
+# Deploying MVC web Application to Google Cloud
