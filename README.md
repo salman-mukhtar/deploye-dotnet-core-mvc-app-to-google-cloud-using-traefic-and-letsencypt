@@ -12,6 +12,7 @@ This repository aims to deploye .Net core mvc application to Google Cloud with T
 
 This document is divided into several parts:
 
-[Part 1](PART-1.md) - Setting up .Net Core MVC Web Application
-[Part 2](PART-2.md) - Preparing Google Cloud
-[Part 3](Part-3.md) - Setup of Kubernetes, Traefik and MySQL
+* [Part 1](PART-1.md) - Setting up .Net Core MVC Web Application
+* [Part 2](PART-2.md) - Preparing Google Cloud
+* [Part 3](Part-3.md) - Deploying .Net Core MVC Web Application to Google Cloud
+
