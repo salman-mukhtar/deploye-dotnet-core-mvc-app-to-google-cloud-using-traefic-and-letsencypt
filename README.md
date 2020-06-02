@@ -209,6 +209,7 @@ Now we are ready to connect to our newly created cluster. To do so please follow
 
 * **Logging/Connect in to a Cluster**
 
+Now we need to give **"kubectl"** access so that we can run commands.
 To log in to a cluster, perform the following steps:
 
 * Visit the GKE menu in Cloud Console.
@@ -224,6 +225,10 @@ Choose how you'd like to log in:
 | ![images/step6-cluster.png](images/step6-cluster.png) |
 | -------------------------------------
 	
+| ![images/connect-gcloud.png](images/connect-gcloud.png) |
+| -------------------------------------
+	
+
 Check the context to be sure you are connected with the Cluster. To do so run following command on terminal.
 
 ```
