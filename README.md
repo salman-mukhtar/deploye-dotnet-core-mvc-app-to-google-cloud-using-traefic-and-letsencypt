@@ -228,7 +228,7 @@ Choose how you'd like to log in:
 | ![images/connect-gcloud.png](images/connect-gcloud.png) |
 | -------------------------------------
 	
-
+Copy the command and run it in terminal or in cloud shell.
 Check the context to be sure you are connected with the Cluster. To do so run following command on terminal.
 
 ```
