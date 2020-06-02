@@ -93,3 +93,10 @@ The name of the context is made of Project ID-Zone-Cluster Name You will see som
 | ![images/cluster-context.png](images/cluster-context.png) |
 | -------------------------------------
 
+
+**(To do)**
+
+Now, we move forward to deploye our application to newly created cluster. 
+The steps to do that are here: Deploying .Net Core MVC Web Application to Google Cloud [Part 3](PART-3.md)
+
+

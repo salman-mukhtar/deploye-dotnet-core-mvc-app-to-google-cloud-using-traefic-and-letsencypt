@@ -14,5 +14,5 @@ This document is divided into several parts:
 
 * [Part 1](PART-1.md) - Setting up .Net Core MVC Web Application
 * [Part 2](PART-2.md) - Preparing Google Cloud
-* [Part 3](Part-3.md) - Deploying .Net Core MVC Web Application to Google Cloud
+* [Part 3](PART-3.md) - Deploying .Net Core MVC Web Application to Google Cloud
 

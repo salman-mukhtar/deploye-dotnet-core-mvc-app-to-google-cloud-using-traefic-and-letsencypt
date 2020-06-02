@@ -132,3 +132,9 @@ Now you can see images are uploaded to dockerhub.
 | ![images/dockerhub-images.png](images/dockerhub-images.png) |
 | -------------------------------------
 
+
+**(To do)**
+
+Now, we move forward to create and prepare our first cluster in Google Cloud to move our applications. 
+The steps to do that are here: Preparing Google Cloud [Part 2](PART-2.md)
+
