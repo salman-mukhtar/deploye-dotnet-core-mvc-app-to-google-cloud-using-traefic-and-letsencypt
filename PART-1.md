@@ -107,7 +107,7 @@ It will ask your password. Write password and hit enter. You will see something 
 | ------------------------------------------------------------------- |
 
 
-Check the images ID using  
+Check the images using  
 
 ```
 docker images

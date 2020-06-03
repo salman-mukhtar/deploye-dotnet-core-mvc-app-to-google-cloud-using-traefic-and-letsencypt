@@ -60,7 +60,7 @@ Now we are ready to deploy our applications to GCP. To proceed we need to have f
 Now we are ready to connect to our newly created cluster. To do so please follow these steps.
 
 
-* **Logging/Connect in to a Cluster**
+* **Connect in to a Cluster**
 
 Now we need to give **"kubectl"** access so that we can run commands.
 To log in to a cluster, perform the following steps:
@@ -80,9 +80,23 @@ Choose how you'd like to log in:
 	
 | ![images/connect-gcloud.png](images/connect-gcloud.png) |
 | -------------------------------------
-	
+
 Copy the command and run it in terminal or in cloud shell.
 Check the context to be sure you are connected with the Cluster. To do so run following command on terminal.
+
+| ![images/connect-to-cluster.png](images/connect-to-cluster.png) |
+| -------------------------------------
+
+Verify Connection
+
+```
+kubectl get all
+kubectl config get-contexts
+```
+
+| ![images/cluster-connection-varify.png](images/cluster-connection-varify.png) |
+| -------------------------------------
+	
 
 ```
 kubectl config get-contexts
