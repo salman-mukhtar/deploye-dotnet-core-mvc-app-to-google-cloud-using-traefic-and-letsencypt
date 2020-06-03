@@ -2,8 +2,8 @@
 
 Our applications will be access through following url's
 
-appv1.digitalbarries.com
-appv2.digitalbarries.com
+* appv1.digitalbarries.com
+* appv2.digitalbarries.com
 
 The domain digitalbarries.com is a Godaddy domain. To redirect trafic we need to add DNS records. Go to DNS settings of your domain provider and add cname records as shown in the picture.
 
