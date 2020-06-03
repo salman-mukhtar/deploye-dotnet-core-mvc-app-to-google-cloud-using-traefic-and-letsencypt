@@ -91,7 +91,6 @@ Verify Connection
 
 ```
 kubectl get all
-kubectl config get-contexts
 ```
 
 | ![images/cluster-connection-varify.png](images/cluster-connection-varify.png) |
