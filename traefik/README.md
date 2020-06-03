@@ -71,10 +71,10 @@ metrics-server            ClusterIP      10.32.11.8    <none>          443/TCP  
 traefik-ingress-service   LoadBalancer   10.32.0.120   35.228.129.61   80:31727/TCP,443:31138/TCP,8080:30841/TCP   44s
 ```
 
+# *Important*
 
-Update DNS before performing next step.
-Add "A" record for traefik-ui.yourdomain.tld and set it to the IP you obtained for the LoadBalancer.
-Add CNAME records for all the apps which you will create ingress(es) for and point them to the hostname in the "A" record above.
+![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) 
+`Update DNS before performing next step. Add "A" record for traefik-ui.yourdomain.tld and set it to the IP you obtained for the LoadBalancer. Add CNAME records for all the apps which you will create ingress(es) for and point them to the hostname in the "A" record above.`
 
 
 ### Create Traefik Web UI:
