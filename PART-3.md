@@ -47,9 +47,6 @@ First of all we need to set up our reverse proxy (Ingress controller) that will 
 
 * Step 09 - Check & Fix DNS Settings With New IP
 
-| ![images/08-trafikexternalip.png](images/08-trafikexternalip.png) |
-| ------------------------------------------------------------------- |
-
 | ![images/dns.png](images/dns.png) |
 | ------------------------------------------------------------------- |
 
@@ -57,12 +54,6 @@ First of all we need to set up our reverse proxy (Ingress controller) that will 
 
 | ![images/09-traefikingress.png](images/09-traefikingress.png) |
 | ------------------------------------------------------------------- |
-
-
-Our applications will be access through following url's
-
-* appv1.digitalbarries.com
-* appv2.digitalbarries.com
 
 
 Now we create 2 deployments for our applications to run in pods on GCP. The deployment files will look as follows.
@@ -255,7 +246,7 @@ Once done you go to google cloud console/dashboard and you will see your pods, s
 | ![images/services-ingress.png](images/services-ingress.png) |
 | ------------------------------------------------------------------- |
 
-Last but not the least we now check our applications by using following url's
+Last but not the least we now check our applications by using following url's as this is how we setup our DNS.
 
 * appv1.digitalbarries.com
 * appv2.digitalbarries.com
