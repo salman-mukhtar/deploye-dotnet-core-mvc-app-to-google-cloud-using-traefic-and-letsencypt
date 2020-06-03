@@ -143,7 +143,7 @@ spec:
           servicePort: 80
 ```
 
-**Ingress for mvc application v1**
+**Ingress for mvc application v2**
 
 ```
 apiVersion: extensions/v1beta1
